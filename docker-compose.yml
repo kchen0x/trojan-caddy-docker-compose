@@ -3,6 +3,7 @@ version: "3"
 services:
   trojan:
     image: teddysun/trojan-go
+    container_name: trojan
     restart: unless-stopped
     ports:
       - "443:443"
@@ -15,6 +16,7 @@ services:
 
   caddy:
     image: caddy
+    container_name: caddy
     restart: unless-stopped
     ports:
       - "80:80"
